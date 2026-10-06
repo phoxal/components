@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.0-dev.9](https://github.com/phoxal/components/compare/phoxal-component-oak_d_lite-v0.0.0-dev.8...phoxal-component-oak_d_lite-v0.0.0-dev.9) - 2026-10-06
+
+### Added
+
+- [**breaking**] accept scalar actuator commands with SDK 0.70
+
 ## [0.0.0-dev.8](https://github.com/phoxal/components/releases/tag/phoxal-component-oak_d_lite-v0.0.0-dev.8) - 2026-10-04
 
 ### Added
