@@ -47,7 +47,7 @@ mod tests {
         assert_eq!(actuator.endpoint, "actuator");
         assert_eq!(
             actuator.request,
-            "phoxal.component.actuator.v1.ActuatorSetpoint"
+            "phoxal.component.actuator.v1.ActuatorCommand"
         );
         assert_eq!(actuator.lease.map(|lease| lease.valid_for_ms()), Some(100));
         let inputs = &<super::Ddsm115Api as RuntimeContract>::Inputs::FIELDS;
