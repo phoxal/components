@@ -8,3 +8,6 @@ mod runtime;
 fn main() -> phoxal::Result<()> {
     phoxal::runtime::run::<runtime::Ddsm115>()
 }
+
+#[cfg(test)]
+mod model_tests;

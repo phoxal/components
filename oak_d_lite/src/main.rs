@@ -9,3 +9,6 @@ mod runtime;
 fn main() -> phoxal::Result<()> {
     phoxal::runtime::run::<runtime::OakDLite>()
 }
+
+#[cfg(test)]
+mod model_tests;
