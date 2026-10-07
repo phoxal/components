@@ -24,6 +24,8 @@ anyhow = { version = "1.0.102" }
 serde = { version = "1.0.228", features = ["derive"] }
 
 [dev-dependencies]
+serde_yaml = "0.9.34"
+roxmltree = "0.20.0"
 serde_json = { version = "1.0.149" }
 
 [lints.rust]

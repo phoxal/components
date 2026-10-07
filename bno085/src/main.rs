@@ -9,3 +9,6 @@ mod runtime;
 fn main() -> phoxal::Result<()> {
     phoxal::runtime::run::<runtime::Bno085>()
 }
+
+#[cfg(test)]
+mod model_tests;

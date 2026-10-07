@@ -23,6 +23,10 @@ phoxal = { version = "0.71.0", default-features = false, features = ["runtime"] 
 anyhow = { version = "1.0.102" }
 serde = { version = "1.0.228", features = ["derive"] }
 
+[dev-dependencies]
+serde_yaml = "0.9.34"
+roxmltree = "0.20.0"
+
 [lints.rust]
 unused = "warn"
 [lints.clippy]

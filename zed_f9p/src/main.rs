@@ -9,3 +9,6 @@ mod runtime;
 fn main() -> phoxal::Result<()> {
     phoxal::runtime::run::<runtime::ZedF9p>()
 }
+
+#[cfg(test)]
+mod model_tests;
