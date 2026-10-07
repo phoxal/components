@@ -3,7 +3,6 @@ compile_error!("Phoxal supports Linux and macOS only");
 
 phoxal::api!();
 
-mod config;
 mod runtime;
 
 fn main() -> phoxal::Result<()> {

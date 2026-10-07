@@ -1,4 +1,3 @@
-use crate::config::Ddsm115Config;
 use anyhow::Result;
 use anyhow::anyhow;
 use phoxal::runtime::Context;
@@ -18,8 +17,8 @@ pub struct Ddsm115Api {}
 #[phoxal::runtime(contract = Ddsm115Api, period_ms = 20, timeout_ms = 100, init_timeout_ms = 1_000)]
 impl Ddsm115 {
     #[init]
-    fn new(config: Ddsm115Config) -> Result<Self> {
-        Err(anyhow!("{BACKEND_UNAVAILABLE} (motor ID {})", config.id))
+    fn new(_config: ()) -> Result<Self> {
+        Err(anyhow!(BACKEND_UNAVAILABLE))
     }
 
     #[step]
@@ -59,7 +58,7 @@ mod tests {
         // Standard types carry no compiled descriptor set; the vocabulary's
         // schema frames are retained instead, exactly like a Rust contract.
         assert!(crate::api::service_methods::u0::retain_standard_schemas() > 0);
-        let error = match Harness::<super::Ddsm115>::new(serde_json::json!({"id": 3})) {
+        let error = match Harness::<super::Ddsm115>::new(serde_json::Value::Null) {
             Ok(_) => panic!("the hardware backend is unavailable"),
             Err(error) => error,
         };
